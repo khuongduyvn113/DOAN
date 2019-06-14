@@ -1,0 +1,82 @@
+﻿@model DOAN2.Models.SinhVien
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<title>Xóa Sinh Viên</title>
+
+<h3>Bạn Có Chắc Chắn Muốn Xóa?</h3>
+<div>
+    <h4>Sinh Viên</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lop.NameCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lop.NameCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Village)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Village)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-success" /> |
+            @Html.ActionLink("Quay Trở Lại", "Index")
+        </div>
+    }
+</div>

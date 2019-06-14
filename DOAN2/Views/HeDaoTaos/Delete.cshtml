@@ -1,0 +1,42 @@
+﻿@model DOAN2.Models.HeDaoTao
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn Chắc Chắn Sẽ Xóa?</h3>
+<div>
+    <h4>Hệ Đào Tạo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-success" /> |
+            @Html.ActionLink("Quay Trở Lại", "Index")
+        </div>
+    }
+</div>

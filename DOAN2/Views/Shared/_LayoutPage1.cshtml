@@ -1,0 +1,61 @@
+﻿<html lang="en">
+<head>
+    <title>Đăng Nhập</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Scripts/Login_v1/images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Login_v1/css/main.css">
+    <!--===============================================================================================-->
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="
+      padding-top 0px;
+      padding-bottom 0px;">
+    @RenderBody()
+    <!--===============================================================================================-->
+    <script src="~/Scripts/Login_v1/vendor/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!--===============================================================================================-->
+    <script src="~/Scripts/Login_v1/vendor/bootstrap/js/popper.js" type="text/javascript"></script>
+    <script src="~/Scripts/Login_v1/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--===============================================================================================-->
+    <script src="~/Scripts/Login_v1/vendor/select2/select2.min.js" type="text/javascript"></script>
+    <!--===============================================================================================-->
+    <script src="~/Scripts/Login_v1/vendor/tilt/tilt.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="text/javascript"></script>
+    <script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="~/Scripts/Login_v1/js/main.js" type="text/javascript"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

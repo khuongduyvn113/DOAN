@@ -1,0 +1,93 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản Lý Đồ Án</title>
+    <link href="~/Scripts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Scripts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Scripts/css/datepicker3.css" rel="stylesheet">
+    <link href="~/Scripts/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="~/Scripts/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @using Microsoft.AspNet.Identity
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar-collapse" aria-expanded="true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">Hihi</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span>Quản Lý Đồ Án</span></a>
+                  <div class="search-box">
+                <input type="text" name="txtSearch" class="search-txt" placeholder="Mời Nhập" />
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+
+                
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar collapse in" aria-expanded="true" style="">
+        <div class="profile-sidebar">
+            <div class="profile-userpic">
+                <img src="~/Image/1.jpg" class="img-responsive" alt="">
+            </div>
+            <div class="profile-usertitle">
+                <p>Xin Chào @User.Identity.GetUserName()</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="divider"></div>
+
+        <ul class="nav menu">
+            <li><a href="~/Khoas/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Khoa</a></li>
+            <li><a href="~/ChuyenNganhs/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Chuyên Ngành</a></li>
+            <li><a href="~/HeDaoTaos/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Hệ Đào Tạo   </a></li>
+            <li><a href="~/NienKhoas/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Niên Khóa  </a></li>
+            <li><a href="~/Lops/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Lớp  </a></li>
+            <li><a href="~/GiaoViens/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Giáo Viên  </a></li>
+            <li><a href="~/SinhViens/Index"><em class="fa fa-heart">&nbsp;</em>Quản Lý Sinh Viên  </a></li>
+            <li><a href="~/DoAns/Index"><em class="fa fa-heart">&nbsp;</em>Danh Sách Đồ Án  </a></li>
+            <li><a href="~/Account/Register"><em class="fa fa-pencil-square-o">&nbsp;</em>Đăng Ký</a></li>
+            <li><a href="~/Account/LogOff"><em class="fa fa-power-off">&nbsp;</em> Đăng Xuất</a></li>
+        </ul>
+    </div><!--/.sidebar-->
+
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="margin-left:0">
+        <div class="row">@RenderBody()</div>
+    </div>
+
+    <script src="~/Scripts/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/chart.min.js"></script>
+    <script src="~/Scripts/js/chart-data.js"></script>
+    <script src="~/Scripts/js/easypiechart.js"></script>
+    <script src="~/Scripts/js/easypiechart-data.js"></script>
+    <script src="~/Scripts/js/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/js/custom.js"></script>
+    <script>
+        window.onload = function () {
+            var chart1 = document.getElementById("line-chart").getContext("2d");
+            window.myLine = new Chart(chart1).Line(lineChartData, {
+                responsive: true,
+                scaleLineColor: "rgba(0,0,0,.2)",
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                scaleFontColor: "#c5c7cc"
+            });
+        };
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

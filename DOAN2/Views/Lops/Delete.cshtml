@@ -1,0 +1,66 @@
+﻿@model DOAN2.Models.Lop
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn Chắc Chắn Sẽ Xóa</h3>
+<div>
+    <h4>Lớp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCN)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChuyenNganh.NameCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChuyenNganh.NameCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeDaoTao.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeDaoTao.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NienKhoaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NienKhoaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-success" /> |
+            @Html.ActionLink("Quay Trở Lại", "Index")
+        </div>
+    }
+</div>
